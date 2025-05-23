@@ -58,17 +58,12 @@ struct ContentView: View {
     }
 
     func playClickSound() {
-        guard let url = Bundle.main.url(forResource: "click", withExtension: "mp3") else {
-            print("Sound file not found.")
-            return
-        }
-        do {
-            player = try AVAudioPlayer(contentsOf: url)
-            player?.play()
-        } catch {
-            print("Failed to play sound: ")
-
-       if pullOffset > 40 {
-          isLightOn.toggle()
-          playClickSound()
-          }
+    guard let url = Bundle.main.url(forResource: "click", withExtension: "mp3") else {
+        print("Sound file not found.")
+        return
+    }
+    do {
+        player = try AVAudioPlayer(contentsOf: url)
+        player?.play()
+    } catch {
+        print("Failed to play sound: ")
