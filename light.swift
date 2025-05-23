@@ -66,9 +66,9 @@ struct ContentView: View {
             player = try AVAudioPlayer(contentsOf: url)
             player?.play()
         } catch {
-            print("Failed to play sound:
+            print("Failed to play sound: ")
 
-if pullOffset > 40 {
-    isLightOn.toggle()
-    playClickSound()
-}
+       if pullOffset > 40 {
+          isLightOn.toggle()
+          playClickSound()
+          }
